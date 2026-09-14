@@ -47,7 +47,7 @@ const projects: CaseStudy[] = [
   }
 ]
 
-export function projectHref(id: string) { return `?project=${id}#work` }
+export function projectHref(id: string) { return `${import.meta.env.BASE_URL}?project=${id}#work` }
 
 function Label({ children }: { children: React.ReactNode }) { return <p className="cs-label">{children}</p> }
 
@@ -57,8 +57,8 @@ export function ProjectShowcase() {
 
   return <main className="case-template">
     <nav className="cs-nav" aria-label="Project navigation">
-      <a className="cs-brand" href="/">MR<span>.</span></a>
-      <a className="cs-back" href="/#work">← Back to all work</a>
+      <a className="cs-brand" href={import.meta.env.BASE_URL}>MR<span>.</span></a>
+      <a className="cs-back" href={`${import.meta.env.BASE_URL}#work`}>← Back to all work</a>
     </nav>
 
     <header className="cs-hero">
@@ -94,6 +94,6 @@ export function ProjectShowcase() {
       </div>
     </section>
 
-    <footer className="cs-footer"><Label>Next step</Label><h2>Want the full engineering profile?</h2><a href="/Muhammad-Ridhwan-Habib-Abdillah-CV.pdf" download>Download CV <span>↓</span></a></footer>
+    <footer className="cs-footer"><Label>Next step</Label><h2>Want the full engineering profile?</h2><a href={`${import.meta.env.BASE_URL}Muhammad-Ridhwan-Habib-Abdillah-CV.pdf`} download>Download CV <span>↓</span></a></footer>
   </main>
 }

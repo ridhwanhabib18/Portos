@@ -6,7 +6,7 @@ import './polish.css'
 import './theme.css'
 import { ProjectShowcase, projectHref } from './ProjectShowcase'
 
-const cv = '/Muhammad-Ridhwan-Habib-Abdillah-CV.pdf'
+const cv = `${import.meta.env.BASE_URL}Muhammad-Ridhwan-Habib-Abdillah-CV.pdf`
 
 const tech = {
   'Build': ['C#', 'TypeScript', 'JavaScript', 'Python', 'C++', 'PHP'],
