@@ -1,0 +1,2 @@
+/* Prevent global homepage header styles from constraining the case-study header. */
+.case-heading{height:auto;max-width:none;margin:0;display:grid;align-items:initial;justify-content:initial;position:static;background:transparent;backdrop-filter:none}
