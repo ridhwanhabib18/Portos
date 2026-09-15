@@ -15,6 +15,8 @@ declare global {
 }
 
 const cv = `${import.meta.env.BASE_URL}Muhammad-Ridhwan-Habib-Abdillah-CV.pdf`;
+const ugmLogo = `${import.meta.env.BASE_URL}logo-ugm.png`;
+const bangkitLogo = `${import.meta.env.BASE_URL}bangkit.png`;
 
 const tech = {
   Build: ["C#", "TypeScript", "JavaScript", "Python", "C++", "PHP"],
@@ -36,10 +38,10 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
-function InstitutionMark({ label, initials }: { label: string; initials: string }) {
+function InstitutionMark({ label, src }: { label: string; src: string }) {
   return (
-    <div className="institution-mark" role="img" aria-label={`${label} logo`}>
-      <span aria-hidden="true">{initials}</span>
+    <div className="institution-mark">
+      <img src={src} alt={`${label} logo`} />
     </div>
   );
 }
@@ -374,7 +376,7 @@ function App() {
               <span>EDUCATION</span>
 
               <div className="education-item">
-                <InstitutionMark label="Universitas Gadjah Mada" initials="UGM" />
+                <InstitutionMark label="Universitas Gadjah Mada" src={ugmLogo} />
                 <div>
                   <h3>Universitas Gadjah Mada</h3>
                   <p>Bachelor of Electrical Engineering · GPA 3.47 / 4.00</p>
@@ -382,7 +384,7 @@ function App() {
               </div>
 
               <div className="education-item">
-                <InstitutionMark label="Bangkit Academy" initials="BA" />
+                <InstitutionMark label="Bangkit Academy" src={bangkitLogo} />
                 <div>
                   <h3>Bangkit Academy</h3>
                   <p>Machine Learning Path</p>
