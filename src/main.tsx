@@ -38,6 +38,22 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
+function SocialIcon({ name }: { name: "GitHub" | "LinkedIn" }) {
+  if (name === "GitHub") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.04 1.53 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.57 9.57 0 0 1 5 0c1.9-1.3 2.74-1.03 2.74-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.69-4.57 4.94.36.31.68.9.68 1.81v2.68c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.04H3.54V8.98H7.1v11.47Z" />
+    </svg>
+  );
+}
+
 function InstitutionMark({ label, src }: { label: string; src: string }) {
   return (
     <div className="institution-mark">
@@ -444,6 +460,16 @@ function App() {
         <a className="contact-link" href={cv} download>
           Start with the CV <Arrow />
         </a>
+        <div className="social-links" aria-label="Professional profiles">
+          <a href="https://www.linkedin.com/in/mridhwanhabib/" target="_blank" rel="noreferrer" aria-label="LinkedIn: mridhwanhabib">
+            <SocialIcon name="LinkedIn" />
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/ridhwanhabib18" target="_blank" rel="noreferrer" aria-label="GitHub: ridhwanhabib18">
+            <SocialIcon name="GitHub" />
+            <span>GitHub</span>
+          </a>
+        </div>
         <p className="footer-note">
           Muhammad Ridhwan Habib Abdillah · Software Engineer
         </p>

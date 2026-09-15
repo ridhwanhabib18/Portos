@@ -100,6 +100,33 @@
 .foundation {
   border-radius: var(--radius);
 }
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font: 11px var(--mono);
+  transition: border-color .2s, color .2s, transform .2s;
+}
+.social-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+.social-links svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
 .timeline article {
   padding: 39px 0;
 }
